@@ -2,3 +2,4 @@ db_data/
 jenkins_home/
 *.jar
 target/
+ssh_keys/
