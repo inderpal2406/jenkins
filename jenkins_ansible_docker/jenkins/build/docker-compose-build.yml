@@ -1,0 +1,7 @@
+version: '3'
+services:
+  java_app:
+    image: "inderpal2406/java_app:$BUILD_TAG"
+    build:
+      context: .
+      dockerfile: Dockerfile_java

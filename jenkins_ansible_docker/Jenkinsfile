@@ -5,8 +5,8 @@ pipeline {
         stage('Build') {
             steps {
                 sh '''
-                    echo "Statement 1 in Build stage."
-                    echo "Statement 2 in Build stage."
+                    ./jenkins/build/mvn.sh mvn -B -DskipTests clean package
+                    ./jenkins/build/build.sh
                 '''
             }
         }

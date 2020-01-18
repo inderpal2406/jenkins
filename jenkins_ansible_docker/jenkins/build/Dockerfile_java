@@ -1,0 +1,17 @@
+# A Dockerfile to package our jar file into a docker image
+# The base image used has java installed in it. This java will be used to run our jar file.
+# The newly built image is the java application image. Running this image as container will run our application.
+
+FROM openjdk:8-jre-alpine
+
+MAINTAINER Inderpal Singh <inderpal2406@gmail.com>
+
+ENV REFRESHED_AT=17-01-2020_12:00_UTC
+
+RUN mkdir /app
+
+COPY *.jar /app/app.jar
+
+WORKDIR /app
+
+CMD [ "java", "-jar", "app.jar" ]
