@@ -5,7 +5,7 @@
 echo "***** Initialising Variables in Jenkins machine *****"
 echo "maven-project" > /tmp/.auth
 echo "$BUILD_TAG" >> /tmp/.auth
-echo "$DOCKERHUB_PASSWORD" >> /tmp/.auth
+echo "$PASS" >> /tmp/.auth
 echo "******** Variables initiated successfully ***********"
 echo 
 
